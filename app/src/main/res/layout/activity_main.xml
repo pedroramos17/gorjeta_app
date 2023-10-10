@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/idTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculadora de Gorjeta"
+        android:textFontWeight="900"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.176" />
+
+    <TextView
+        android:id="@+id/idAccountValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor da conta:"
+        android:textFontWeight="600"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/idTitle"
+        app:layout_constraintVertical_bias="0.128" />
+
+    <EditText
+        android:id="@+id/idAccountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:width="124pt"
+        android:hint="Valor da Conta"
+        android:inputType="numberDecimal"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/idAccountValueText" />
+
+    <TextView
+        android:id="@+id/idServiceQualityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qualidade do serviço:"
+        android:textFontWeight="600"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/idAccountValue"
+        app:layout_constraintVertical_bias="0.128" />
+
+    <Spinner
+        android:id="@+id/idServiceQuality"
+        android:layout_width="296dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:hint="Valor da Conta"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/idServiceQualityText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
