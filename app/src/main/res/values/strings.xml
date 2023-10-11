@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">gorjeta_app</string>
     <color name="green">#4CAF50</color>
+    <array name="qualities_array" >
+        <item>Excelente - 10%</item>
+        <item>Ótimo - 8%</item>
+        <item>Bom - 5%</item>
+        <item>Ruim - 2%</item>
+    </array>
+
 </resources>

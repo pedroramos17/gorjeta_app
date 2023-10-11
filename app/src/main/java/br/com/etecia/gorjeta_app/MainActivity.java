@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -13,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editTextAccountValue, editTextTipValue, editTextAccountTotalValue;
     Spinner spinnerQuality;
 
+    Button btnCalcTip;
 
 
     @Override
@@ -38,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
         disableEditText(editTextTipValue);
         disableEditText(editTextAccountTotalValue);
+
+
     }
 
     private void disableEditText(EditText editText) {
@@ -46,5 +52,45 @@ public class MainActivity extends AppCompatActivity {
         editText.setCursorVisible(false);
         editText.setKeyListener(null);
         editText.setBackgroundColor(Color.TRANSPARENT);
+    }
+
+    String quality = spinnerQuality.getSelectedItem().toString();
+
+    public String getTipValue() {
+        int accountValue = Integer.parseInt(editTextAccountValue.getText().toString());
+
+        double tipValue = accountValue * getQualityResult(quality);
+
+        return String.valueOf(tipValue);
+    }
+
+    public double getQualityResult(String q) {
+        if(quality.equals("Excelente - 10%")) {
+            return setIntInQualitySpinner(QualityType.EXCELLENT);
+        }
+        if(quality.equals("Ótimo - 8%")) {
+            return setIntInQualitySpinner(QualityType.GREAT);
+        }
+        if(quality.equals("Bom - 5%")) {
+            return setIntInQualitySpinner(QualityType.GOOD);
+        }
+        if(quality.equals("Ruim - 2%")) {
+            return setIntInQualitySpinner(QualityType.BAD);
+        }
+        return 0D;
+    }
+
+    public double setIntInQualitySpinner(QualityType type) {
+        switch (type) {
+            case EXCELLENT:
+                return 0.1;
+            case GREAT:
+                return 0.08;
+            case GOOD:
+                return 0.05;
+            case BAD:
+                return 0.02;
+        }
+        return 0D;
     }
 }

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="qualities_array" >
-        <item>Excelente - 10%</item>
-        <item>Ótimo - 8%</item>
-        <item>Bom - 5%</item>
-        <item>Ruim - 2%</item>
-    </string-array>
-</resources>
