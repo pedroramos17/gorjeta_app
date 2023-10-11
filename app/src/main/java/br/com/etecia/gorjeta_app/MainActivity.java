@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerQuality = (Spinner) findViewById(R.id.idServiceQuality);
         editTextTipValue = (EditText) findViewById(R.id.idTipValue);
         editTextAccountTotalValue = (EditText) findViewById(R.id.idAccountTotalValue);
+        btnCalcTip = (Button) findViewById(R.id.idBtnCalcTip);
 
 
         ArrayAdapter<CharSequence> adapterSpinner = ArrayAdapter.createFromResource(
@@ -42,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
 
         disableEditText(editTextTipValue);
         disableEditText(editTextAccountTotalValue);
+
+        btnCalcTip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editTextTipValue.setText("R$ " + getTipValue());
+            }
+        });
 
 
     }
