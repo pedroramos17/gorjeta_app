@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         return String.valueOf(tipValue);
     }
 
-    public double getQualityResult(String q) {
+    public double getQualityResult(String quality) {
         if(quality.equals("Excelente - 10%")) {
             return setIntInQualitySpinner(QualityType.EXCELLENT);
         }
