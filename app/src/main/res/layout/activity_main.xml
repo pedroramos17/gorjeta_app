@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calculadora de Gorjeta"
-        android:textFontWeight="900"
+        android:textStyle="bold"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Valor da conta:"
-        android:textFontWeight="600"
+        android:textStyle="bold"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Qualidade do serviço:"
-        android:textFontWeight="600"
+        android:textStyle="bold"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,4 +70,40 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/idServiceQualityText" />
+
+    <Button
+        android:id="@+id/idBtnCalcTip"
+        android:layout_width="224dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="56dp"
+        android:text="Calcular gorjeta"
+        android:backgroundTint="@color/green"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/idServiceQuality" />
+
+    <EditText
+        android:id="@+id/idTipValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="124pt"
+        android:layout_marginTop="96dp"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/idBtnCalcTip"
+        />
+
+    <EditText
+        android:id="@+id/idAccountTotalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="124pt"
+        android:layout_marginTop="96dp"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/idTipValue"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

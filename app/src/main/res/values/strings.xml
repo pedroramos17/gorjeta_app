@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">gorjeta_app</string>
+    <color name="green">#4CAF50</color>
 </resources>
